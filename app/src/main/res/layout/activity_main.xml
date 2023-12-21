@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+    android:background="#DF000000"
+    tools:context=".MainActivity">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="2"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/problemText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:maxLines="2"
+        android:textAlignment="textEnd"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/resultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@id/resultText"
+        app:layout_constraintTop_toBottomOf="@id/problemText" />
+
+
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="40dp"
+
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="#11DA1A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</LinearLayout>
+
+
+
+
+    <LinearLayout
+
+        style="@style/buttonRow">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/allClear"
+            style="@style/buttonNumber"
+            android:text="AC"
+            android:textColor="#FFC107"
+            android:textSize="35dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Del"
+            style="@style/buttonNumber"
+            android:text="⌫"
+            android:textColor="#FFC107"
+            android:textSize="35dp"
+            />
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Mul"
+            style="@style/buttonOperator"
+            android:text="*"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+
+        style="@style/buttonRow">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/One"
+            style="@style/buttonNumber"
+            android:text="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Two"
+            style="@style/buttonNumber"
+            android:text="2"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Three"
+            style="@style/buttonNumber"
+
+            android:text="3"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Plus"
+            style="@style/buttonOperator"
+            android:text="+"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+
+        style="@style/buttonRow">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Four"
+            style="@style/buttonNumber"
+            android:text="4"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Five"
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="5"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Six"
+            style="@style/buttonNumber"
+            android:onClick="numberAction"
+            android:text="6"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Minus"
+            style="@style/buttonOperator"
+            android:text="-"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+
+        style="@style/buttonRow">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Seven"
+            style="@style/buttonNumber"
+            android:text="7" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Eight"
+            style="@style/buttonNumber"
+            android:text="8"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Nine"
+            style="@style/buttonNumber"
+            android:text="9"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Divide"
+            style="@style/buttonOperator"
+            android:text="/"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+
+        style="@style/buttonRow">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Dot"
+            style="@style/buttonNumber"
+            android:text="." />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Zero"
+            style="@style/buttonNumber"
+            android:text="0"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Equals"
+            style="@style/buttonNumber"
+           android:layout_weight="2"
+            android:background="#FF5722"
+            android:textColor="@color/white"
+            android:textSize="70sp"
+            android:text="="
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
